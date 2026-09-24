@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevOps Journey | AWS EC2 + S3</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8fbff; color: #172554; }
+    nav { background: #071a3d; color: white; height: 70px; display: flex; align-items: center; justify-content: space-between; padding: 0 7%; }
+    nav a { color: white; text-decoration: none; margin: 0 15px; }
+    .hero { min-height: 400px; background: linear-gradient(135deg, #071a3d, #123b8c); color: white; padding: 80px 7%; }
+    .hero h1 { font-size: 48px; margin-bottom: 20px; }
+    .architecture { margin-top: 40px; display: flex; gap: 20px; justify-content: center; }
+    .flow-box { background: white; color: #172554; padding: 20px; border-radius: 12px; text-align: center; width: 150px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+    .arrow { font-size: 30px; color: #fbbf24; display: flex; align-items: center; }
+    footer { background: #071a3d; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">☁️ DevOps <span>Journey</span></div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#overview">Overview</a>
+      <a href="#architecture">Architecture</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <h1>Web Hosting on <span>Amazon EC2</span></h1>
+    <p>
+      This project demonstrates how to copy website files from Amazon S3
+      and host them on an EC2 instance using Apache, managed with Terraform.
+    </p>
+  </section>
+
+  <!-- ARCHITECTURE -->
+  <section id="architecture">
+    <h2 style="text-align:center;">🏗️ Architecture</h2>
+    <div class="architecture">
+      <div class="flow-box">
+        <strong>Terraform</strong><br><small>Infrastructure</small>
+      </div>
+      <div class="arrow">→</div>
+      <div class="flow-box">
+        <strong>EC2 Instance</strong><br><small>Apache Hosting</small>
+      </div>
+      <div class="arrow">→</div>
+      <div class="flow-box">
+        <strong>Browser</strong><br><small>Website</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section id="overview" style="padding:40px 7%;">
+    <h2>💡 Project Overview</h2>
+    <p>
+      Instead of using S3 static website hosting, this setup uses EC2 as the web server.
+      Files are stored in S3, copied to EC2 via IAM role + AWS CLI, and served by Apache.
+    </p>
+    <ul>
+      <li>✓ EC2 instance runs Apache</li>
+      <li>✓ S3 bucket stores website files</li>
+      <li>✓ Terraform manages infrastructure</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    AWS | Terraform | EC2 Web Hosting
+  </footer>
+
+</body>
+</html>
